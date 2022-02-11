@@ -1,0 +1,40 @@
+-----------------------------------------------------------
+-----------------------------------------------------------
+
+
+    VERSİYONLAR
+
+
+    19  kod ile kendi kendini çevirebildim. Sadece "src/" önlinki, codeTranslate(), 
+        dictionary.json\sözlük&terms elle çevirildi mecburen
+    18  regexp değiştirildi, sözlük[$1] ile arıyor (Türkçe karakterler de)
+    17  eklenen kelime kilit kelime mi kontrol ediliyor
+    16  regex başta sonda türkçe karakter olması da düzeltildi
+    15  tüm JS kilit kelimeleri terimlere (sozluk.json) eklendi 
+    14  console.log çevirileri iptal+ içinde aramasın diye sort().reverse()
+    13  replace kompil değiştirildi
+
+-----------------------------------------------------------
+-----------------------------------------------------------
+
+    EKLENECEKLER
+
+
+
+
+-----------------------------------------------------------
+-----------------------------------------------------------
+    NE İŞE YARAR ?
+    ---------------
+örnek.js'i alır, javascript kelimelerini ayıklayarak KONSOL'a bir obje oluşturur.
+maksat değişken ve işler isimlerini farklı bir dile kolayca çevirmek.
+
+    KULLANIM
+    --------
+CMD> üst dizinden . .
+type "D:\BOX\docs harici\2019 DOCS\YazıÇizi\*.*" > örnek.js
+örnek.js dizine kopyalanır. 
+
+Yazabileceklerin: sor() dur() sözlüğüKaydet() çevir(), sözlük, bulunanlar, loadedText
+-----------------------------------------------------------
+-----------------------------------------------------------
