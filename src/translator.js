@@ -12,7 +12,7 @@ function preload () {
 }
 function setup() {    // AÇILIŞ EKRANI 	
 	noLoop()
-	console.log("Komutlar: ask() stop() saveDictionary() translate(), dictionary, foundWords, loadedText")
+	console.log("Commands: ask() stop() saveDictionary() codeTranslate(), dictionary, foundWords, loadedText")
 }
 function prepareDictionary () {
 	foundWords= new Set()
@@ -25,7 +25,7 @@ function prepareDictionary () {
 	.filter(a => ! Object.keys(dictionary).includes(a))
 	.map(tx=>foundWords[tx]="")	
 	
-	console.log("example.js'de dictionary.json'da nonExistant",Object.keys(foundWords).length,"word: foundWords")
+	console.log("dictionary.json nonExistant word count: ",Object.keys(foundWords).length)
 }
 function loadDictionary() {
 	dictionary= loadedDict.dictionary
@@ -63,7 +63,7 @@ function saveDictionary () {
 		allIncluding
 		.map(inText => {
 			if (arrayy.includes(inText)) {
-				console.log(inText,"wordd inOriginal de geçiyor, çakışmasın")
+				console.log(inText,", Beware this very word is present in original text.")
 			}
 		})
 		return true
@@ -85,7 +85,7 @@ function ask() {
 			if (cv=="1") terms.push(sr.toLowerCase())
 			else if (cv!="0") {
 				if (terms.includes(cv.toLowerCase())) {
-					console.log("Özel words kullanılamaz: ",cv)
+					console.log("Special word can not be used: ",cv)
 					cv= ""
 					return false
 				} else
@@ -103,7 +103,7 @@ function ask() {
 			cv=""
 		}
 	}
-	console.log(sr," cv=\"1\":addToIgnoreList | cv=\"0\":pass | cv=\"word\":türkçeÇevrimeEkle")
+	console.log(sr," cv=\"1\":addToIgnoredTerms | cv=\"0\":dismiss | cv=\"word\":english equivalent")
 	return true
 }
 function stop () {clearInterval(loop)}
